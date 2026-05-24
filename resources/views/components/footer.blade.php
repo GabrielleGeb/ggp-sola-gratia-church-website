@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <div class="logo-cross big">✝</div>
+      <div class="logo-cross big">&#10013;</div>
       <div class="logo-name">GGP Sola Gratia</div>
       <p>Jl. Kertanegara No.26, Dusun Tratap, Sawotratap, Kec. Gedangan,<br>Kab. Sidoarjo, Jawa Timur, Indonesia</p>
     </div>
@@ -21,7 +21,7 @@
       <h4>Kontak</h4>
       <p><i data-lucide="phone" class="footer-icon"></i> +62 812-3456-7890</p>
       <p><i data-lucide="mail" class="footer-icon"></i> info@ggpsolagratia.id</p>
-      <p><i data-lucide="clock" class="footer-icon"></i> Ibadah: Minggu 08.00 | 10.30 | 17.00</p>
+      <!-- <p><i data-lucide="clock" class="footer-icon"></i> Ibadah: Minggu 08.00 | 10.30 | 17.00</p> -->
     </div>
   </div>
   <div class="footer-bottom">

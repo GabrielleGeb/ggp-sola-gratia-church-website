@@ -53,22 +53,22 @@
       <h2 style="color: var(--white); margin-bottom: 3rem; margin-top: 1rem;">Yang Kami Pegang Teguh</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
         <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 2rem;">
-          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">✝</div>
+          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">&#10013;</div>
           <strong style="display: block; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Kasih</strong>
           <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-family: 'Outfit', sans-serif;">Mengasihi Tuhan dan sesama adalah inti dari setiap pelayanan kami</p>
         </div>
         <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 2rem;">
-          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">✝</div>
+          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">&#10013;</div>
           <strong style="display: block; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Iman</strong>
           <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-family: 'Outfit', sans-serif;">Percaya sepenuhnya pada janji dan kuasa Firman Allah</p>
         </div>
         <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 2rem;">
-          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">✝</div>
+          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">&#10013;</div>
           <strong style="display: block; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Penginjilan</strong>
           <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-family: 'Outfit', sans-serif;">Membagikan kabar baik kepada setiap orang yang belum mengenal Kristus</p>
         </div>
         <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 2rem;">
-          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">✝</div>
+          <div style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold);">&#10013;</div>
           <strong style="display: block; color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Komunitas</strong>
           <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-family: 'Outfit', sans-serif;">Bersama-sama bertumbuh sebagai satu tubuh Kristus yang utuh</p>
         </div>

@@ -1,7 +1,7 @@
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="{{ route('home') }}" class="logo">
-      <div class="logo-cross" id="logo-cross-btn">✝</div>
+      <div class="logo-cross" id="logo-cross-btn">&#10013;</div>
       <div>
         <div class="logo-name">GGP Sola Gratia</div>
         <div class="logo-tagline">Gereja Gerakan Pentakosta</div>

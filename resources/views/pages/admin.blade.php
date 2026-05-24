@@ -12,7 +12,7 @@
 
     {{-- LOGIN FORM --}}
     <div id="admin-login" class="admin-login-box">
-      <div class="admin-login-logo">✝</div>
+      <div class="admin-login-logo">&#10013;</div>
       <h2>Panel Admin</h2>
       <p class="admin-login-sub">Masuk dengan akun admin gereja Anda</p>
       <input type="text" id="admin-user" placeholder="Username" autocomplete="off">
