@@ -18,7 +18,7 @@ return new class extends Migration
         // Seed default admin password hash for "gbi2024"
         DB::table('settings')->insert([
             'key'   => 'admin_pass_hash',
-            'value' => '2599e48ca230a2c1cd3b846f7dd9bf618a7f7d15f430efbfe8ed17d0206551e2',
+            'value' => 'f05bd8112c70151704c00302fc800b5b935f84b82fe787570f9fb9cdf01535d3',
         ]);
     }
 
