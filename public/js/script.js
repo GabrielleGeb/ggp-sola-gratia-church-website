@@ -71,7 +71,7 @@ async function renderHomeRenungan() {
         <p>${escHtml(r.isi.substring(0, 120))}...</p>
         <span class="card-tag">${escHtml(r.ayat)}</span>
       </div>
-    `).join("") || '<p style="color:var(--text-light)">Belum ada renungan.</p>';
+    `).join("") || '<div style="grid-column:1/-1;text-align:center;color:var(--text-light);padding:60px 0;">Belum ada renungan.</div>';
   } catch { list.innerHTML = '<p style="color:var(--text-light)">Gagal memuat renungan.</p>'; }
 }
 
@@ -104,7 +104,7 @@ async function renderHomePengumuman() {
         <strong>${escHtml(p.judul)}</strong>
         <p>${escHtml(p.isi.substring(0, 100))}...</p>
       </div>
-    `).join("") || '<p style="color:var(--text-light)">Belum ada pengumuman.</p>';
+    `).join("") || '<div style="color:var(--text-light);text-align:center;width:100%;padding:60px 0;">Belum ada pengumuman.</div>';
   } catch { list.innerHTML = '<p style="color:var(--text-light)">Gagal memuat pengumuman.</p>'; }
 }
 
@@ -125,7 +125,7 @@ async function renderRenungan() {
         <p>${escHtml(r.isi.substring(0, 140))}...</p>
         <span class="card-tag">${escHtml(r.ayat)}</span>
       </div>
-    `).join("") : '<p style="color:var(--text-light)">Belum ada renungan.</p>';
+    `).join("") : '<div style="grid-column:1/-1;text-align:center;color:var(--text-light);padding:60px 0;">Belum ada renungan.</div>';
   } catch { list.innerHTML = '<p style="color:var(--text-light)">Gagal memuat data.</p>'; }
 }
 
@@ -255,7 +255,7 @@ async function renderPengumuman() {
         <h3>${escHtml(p.judul)}</h3>
         <p>${escHtml(p.isi.substring(0, 130))}...</p>
       </div>
-    `).join("") : '<p style="color:var(--text-light)">Belum ada pengumuman.</p>';
+    `).join("") : '<div style="color:var(--text-light);text-align:center;width:100%;padding:60px 0;">Belum ada pengumuman.</div>';
   } catch { list.innerHTML = '<p style="color:var(--text-light)">Gagal memuat data.</p>'; }
 }
 

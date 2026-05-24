@@ -28,9 +28,6 @@
         <a href="{{ route('admin', ['tab' => 'renungan']) }}" class="tab-btn {{ $adminTab === 'renungan' ? 'active' : '' }}" data-action="admin-tab" data-target="renungan">
           <i data-lucide="book-open"></i> Renungan
         </a>
-        <a href="{{ route('admin', ['tab' => 'sermon']) }}" class="tab-btn {{ $adminTab === 'sermon' ? 'active' : '' }}" data-action="admin-tab" data-target="sermon">
-          <i data-lucide="mic"></i> Sermon
-        </a>
         <a href="{{ route('admin', ['tab' => 'jadwal']) }}" class="tab-btn {{ $adminTab === 'jadwal-admin' ? 'active' : '' }}" data-action="admin-tab" data-target="jadwal-admin">
           <i data-lucide="clock"></i> Jadwal
         </a>
@@ -68,20 +65,6 @@
         <button class="btn-primary" data-action="add-renungan">Simpan Renungan</button>
         <h3 style="margin-top:2rem">Daftar Renungan</h3>
         <div id="admin-renungan-list" class="admin-list"></div>
-      </div>
-
-      {{-- TAB: SERMON --}}
-      <div id="admin-sermon" class="admin-tab-content">
-        <h3>Tambah Sermon / Khotbah</h3>
-        <div class="form-group"><label>Tanggal</label><input type="date" id="s-tanggal"></div>
-        <div class="form-group"><label>Judul Sermon</label><input type="text" id="s-judul" placeholder="Judul khotbah..."></div>
-        <div class="form-group"><label>Pembicara</label><input type="text" id="s-pembicara" placeholder="Nama hamba Tuhan..."></div>
-        <div class="form-group"><label>Seri Khotbah</label><input type="text" id="s-seri" placeholder="mis: Seri Iman (opsional)"></div>
-        <div class="form-group"><label>Ringkasan / Isi</label><textarea id="s-isi" rows="6" placeholder="Ringkasan atau isi lengkap khotbah..."></textarea></div>
-        <div class="form-group"><label>Link YouTube (opsional)</label><input type="text" id="s-yt" placeholder="https://youtube.com/..."></div>
-        <button class="btn-primary" data-action="add-sermon">Simpan Sermon</button>
-        <h3 style="margin-top:2rem">Daftar Sermon</h3>
-        <div id="admin-sermon-list" class="admin-list"></div>
       </div>
 
       {{-- TAB: JADWAL --}}
@@ -197,10 +180,65 @@
 
       {{-- TAB: VISI MISI --}}
       <div id="admin-visi-admin" class="admin-tab-content">
-        <h3>Edit Visi &amp; Misi Gereja</h3>
-        <div class="form-group"><label>Visi Gereja</label><textarea id="vm-visi-input" rows="4"></textarea></div>
-        <div class="form-group"><label>Misi Gereja</label><textarea id="vm-misi-input" rows="8"></textarea></div>
-        <button class="btn-primary" data-action="save-visi-misi">Simpan Visi &amp; Misi</button>
+        <h3>Visi &amp; Misi Gereja</h3>
+
+        @if(session('success'))
+          <div class="alert-success">{{ session('success') }}</div>
+        @endif
+
+        {{-- Form Tambah --}}
+        <form method="POST" action="{{ route('visi-misi.store') }}" style="margin-bottom:2rem">
+          @csrf
+          <div class="form-group">
+            <label>Tipe</label>
+            <select name="tipe" required>
+              <option value="visi">Visi</option>
+              <option value="misi">Misi</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Konten</label>
+            <textarea name="konten" rows="3" required placeholder="Tulis visi atau poin misi..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">+ Tambah</button>
+        </form>
+
+        {{-- Daftar Visi --}}
+        <h4>Visi</h4>
+        @php $visiList = \App\Models\VisiMisi::where('tipe','visi')->orderBy('urutan')->get(); @endphp
+        @forelse($visiList as $item)
+          <div class="admin-list-item">
+            <span>{{ $item->konten }}</span>
+            <div style="display:flex;gap:0.5rem">
+              <form method="POST" action="{{ route('visi-misi.update', $item->id) }}">
+                @csrf @method('PUT')
+                <input type="hidden" name="konten" value="{{ $item->konten }}">
+                {{-- tombol edit bisa dikembangkan dengan modal --}}
+              </form>
+              <form method="POST" action="{{ route('visi-misi.destroy', $item->id) }}" onsubmit="return confirm('Hapus item ini?')">
+                @csrf @method('DELETE')
+                <button type="submit" class="btn-danger">Hapus</button>
+              </form>
+            </div>
+          </div>
+        @empty
+          <p>Belum ada data visi.</p>
+        @endforelse
+
+        {{-- Daftar Misi --}}
+        <h4 style="margin-top:1.5rem">Misi</h4>
+        @php $misiList = \App\Models\VisiMisi::where('tipe','misi')->orderBy('urutan')->get(); @endphp
+        @forelse($misiList as $item)
+          <div class="admin-list-item">
+            <span>{{ $item->konten }}</span>
+            <form method="POST" action="{{ route('visi-misi.destroy', $item->id) }}" onsubmit="return confirm('Hapus item ini?')">
+              @csrf @method('DELETE')
+              <button type="submit" class="btn-danger">Hapus</button>
+            </form>
+          </div>
+        @empty
+          <p>Belum ada data misi.</p>
+        @endforelse
       </div>
 
       {{-- TAB: SETELAN --}}

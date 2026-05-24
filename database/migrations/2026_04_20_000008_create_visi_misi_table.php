@@ -8,10 +8,12 @@ return new class extends Migration
 {
     public function up(): void
     {
+        Schema::dropIfExists('visi_misi');
         Schema::create('visi_misi', function (Blueprint $table) {
             $table->id();
-            $table->text('visi')->nullable();
-            $table->text('misi')->nullable();
+            $table->enum('tipe', ['visi', 'misi']);
+            $table->text('konten');
+            $table->unsignedInteger('urutan')->default(0);
             $table->timestamps();
         });
     }

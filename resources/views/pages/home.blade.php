@@ -12,11 +12,11 @@
         Gereja Gerakan Pentakosta
         <span class="hero-sub">Sola Gratia</span>
       </h1>
-      <p class="hero-verse">"Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang tunggal" — Yohanes 3:16</p>
-      <div class="hero-buttons">
+      <!-- <p class="hero-verse">"Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengaruniakan Anak-Nya yang tunggal" — Yohanes 3:16</p> -->
+      <!-- <div class="hero-buttons">
         <a href="{{ route('renungan') }}" class="btn-primary">Baca Renungan</a>
         <a href="{{ route('jadwal') }}" class="btn-outline">Jadwal Ibadah</a>
-      </div>
+      </div> -->
     </div>
     <div class="hero-scroll">scroll ↓</div>
   </section>
@@ -31,17 +31,17 @@
           <p>Firman Tuhan setiap hari untuk menguatkan iman Anda</p>
           <span class="h-link">Baca →</span>
         </a>
-        <a href="{{ route('jadwal') }}" class="highlight-card">
+        <!-- <a href="{{ route('jadwal') }}" class="highlight-card">
           <div class="h-icon"><i data-lucide="clock"></i></div>
           <h3>Jadwal Ibadah</h3>
           <p>Waktu dan tempat pelaksanaan ibadah mingguan dan tengah minggu</p>
           <span class="h-link">Lihat →</span>
-        </a>
-        <a href="{{ route('pengumuman') }}" class="highlight-card">
-          <div class="h-icon"><i data-lucide="megaphone"></i></div>
-          <h3>Pengumuman</h3>
-          <p>Informasi terkini tentang kegiatan dan program gereja</p>
-          <span class="h-link">Info →</span>
+        </a> -->
+        <a href="{{ route('sermon') }}" class="highlight-card">
+          <div class="h-icon"><i data-lucide="mic"></i></div>
+          <h3>Khotbah</h3>
+          <p>Kumpulan khotbah dan pesan firman Tuhan dari para hamba-Nya</p>
+          <span class="h-link">Dengar →</span>
         </a>
         <a href="{{ route('pastoral') }}" class="highlight-card">
           <div class="h-icon"><i data-lucide="mail"></i></div>
@@ -65,21 +65,29 @@
     </div>
   </section>
 
-  {{-- VISI PREVIEW --}}
-  <section class="home-section visi-preview">
-    <div class="container two-col">
-      <div class="col-text">
-        <span class="section-label">Visi Kami</span>
-        <h2>Menjadi Gereja yang Mengasihi Tuhan &amp; Sesama</h2>
-        <p>GGP Sola Gratia hadir untuk menjadi rumah rohani bagi setiap jiwa, tempat di mana kasih Tuhan dialami, iman bertumbuh, dan setiap orang diperlengkapi untuk menjadi terang di dunia.</p>
-        <a href="{{ route('visi-misi') }}" class="btn-primary">Selengkapnya</a>
+{{-- VISI PREVIEW --}}
+<section class="home-section visi-preview">
+  <div class="container">
+    <div class="visi-split">
+      <div class="visi-split-col">
+        <span class="visi-split-label">Visi</span>
+        @foreach($visi as $v)
+          <h2 class="visi-split-text">{{ $v->konten }}</h2>
+        @endforeach
       </div>
-      <div class="col-deco">
-        <div class="deco-cross">✝</div>
-        <div class="deco-verse">"Kasihilah Tuhan, Allahmu, dengan segenap hatimu"<br><em>— Matius 22:37</em></div>
+      <div class="visi-split-divider"></div>
+      <div class="visi-split-col">
+        <span class="visi-split-label">Misi</span>
+        @foreach($misi as $m)
+          <h3 class="visi-split-text-sm">{{ $m->konten }}</h3>
+        @endforeach
       </div>
     </div>
-  </section>
+    <div style="text-align:center; margin-top: 3rem;">
+      <a href="{{ route('visi-misi') }}" class="btn-outline">Selengkapnya</a>
+    </div>
+  </div>
+</section>
 
   {{-- RENUNGAN PREVIEW --}}
   <section class="home-section renungan-preview">
@@ -87,9 +95,6 @@
       <span class="section-label">Renungan Terbaru</span>
       <h2>Firman Hari Ini</h2>
       <div id="home-renungan-list" class="card-grid"></div>
-      <div style="text-align:center;margin-top:2rem">
-        <a href="{{ route('renungan') }}" class="btn-outline">Lihat Semua Renungan</a>
-      </div>
     </div>
   </section>
 

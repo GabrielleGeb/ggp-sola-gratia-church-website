@@ -13,40 +13,21 @@
     <span class="section-label">Layanan Gereja</span>
     <h2 style="margin-bottom:2.5rem;color:var(--dark)">Kami Ada untuk Melayani Anda</h2>
     <div class="pastoral-grid">
-
       <div class="pastoral-card">
         <div class="p-icon"><i data-lucide="droplets"></i></div>
         <h3>Baptisan Air</h3>
         <p>Baptisan air dilaksanakan setiap semester. Pendaftaran dibuka 1 bulan sebelumnya melalui sekretariat gereja.</p>
-        <ul>
-          <li>Usia minimal: 13 tahun</li>
-          <li>Wajib mengikuti kelas persiapan baptisan (4 pertemuan)</li>
-          <li>Kontak: <strong>Ibu Maria — 0812-0001-0001</strong></li>
-        </ul>
       </div>
-
       <div class="pastoral-card">
         <div class="p-icon"><i data-lucide="heart"></i></div>
         <h3>Pernikahan Kudus</h3>
         <p>Pelayanan pernikahan Kristen dilayani oleh gembala gereja. Pendaftaran minimal 3 bulan sebelum hari H.</p>
-        <ul>
-          <li>Konseling pra-nikah wajib (minimum 3 sesi)</li>
-          <li>Kedua mempelai adalah jemaat terdaftar</li>
-          <li>Kontak: <strong>Pnt. Budi — 0812-0002-0002</strong></li>
-        </ul>
       </div>
-
       <div class="pastoral-card">
         <div class="p-icon"><i data-lucide="baby"></i></div>
         <h3>Penyerahan Anak</h3>
         <p>Penyerahan anak kepada Tuhan dilaksanakan dalam ibadah raya pada hari Minggu.</p>
-        <ul>
-          <li>Anak berusia 0–2 tahun</li>
-          <li>Orang tua adalah jemaat terdaftar</li>
-          <li>Kontak: <strong>Sdri. Rut — 0812-0003-0003</strong></li>
-        </ul>
       </div>
-
     </div>
   </div>
 

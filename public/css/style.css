@@ -153,7 +153,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 .home-section { padding: 6rem 0; }
 .highlight-section { background: var(--white); }
 .section-label {
-  display: block; font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+  display: block; font-size: 1.25rem; letter-spacing: 0.35em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1rem; font-weight: 700;
   font-family: 'Outfit', sans-serif;
 }
@@ -241,7 +241,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
   display: flex; align-items: center; justify-content: center;
 }
 .pastor-photo svg { width: 72px; height: 72px; color: rgba(201,168,76,0.4); }
-.pastor-info { padding: 1.75rem; }
+.pastor-info { padding: 1.75rem; text-align: center; }
 .pastor-jabatan { font-size: 0.65rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.4rem; font-weight: 700; font-family: 'Outfit', sans-serif; }
 .pastor-info h3 { color: var(--dark); font-size: 1.2rem; margin-bottom: 0.75rem; }
 .pastor-bio { font-size: 0.875rem; color: var(--text-light); line-height: 1.8; font-family: 'Outfit', sans-serif; }
@@ -282,6 +282,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 .pastoral-card ul li { font-size: 0.875rem; color: var(--text-light); margin-bottom: 0.5rem; line-height: 1.7; font-family: 'Outfit', sans-serif; }
 
 /* ---- JADWAL DAY GROUP ---- */
+.jadwal-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .jadwal-day-group { margin-bottom: 2.5rem; }
 .jadwal-day-title {
   font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.7rem;
@@ -323,14 +324,14 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 .jadwal-preview-jam { font-size: 1.4rem; font-weight: 800; color: var(--dark); font-family: 'Montserrat', sans-serif; margin-bottom: 0.25rem; transition: var(--transition); }
 .jadwal-preview-tempat { font-size: 0.78rem; color: var(--text-light); font-family: 'Outfit', sans-serif; transition: var(--transition); }
 
-.jadwal-full-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.jadwal-2col { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
 .jadwal-card { background: var(--white); border: 1px solid #e5e5e5; border-radius: var(--radius); padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; transition: var(--transition); }
 .jadwal-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); border-color: var(--gold); }
 .jadwal-hari { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); background: #fef9eb; padding: 0.4rem 0.75rem; border-radius: 4px; white-space: nowrap; font-family: 'Outfit', sans-serif; }
-.jadwal-info h3 { font-size: 1rem; color: var(--dark); margin-bottom: 0.5rem; }
+.jadwal-info h3 { font-size: 1.25rem; color: var(--dark); margin-bottom: 0.5rem; }
 .jadwal-meta { display: flex; flex-direction: column; gap: 0.25rem; }
-.jadwal-meta span { font-size: 0.8rem; color: var(--text-light); font-family: 'Outfit', sans-serif; display: flex; align-items: center; }
-.jadwal-ket { font-size: 0.78rem; color: var(--text-light); margin-top: 0.5rem; font-style: italic; font-family: 'Outfit', sans-serif; }
+.jadwal-meta span { font-size: 1rem; color: var(--text-light); font-family: 'Outfit', sans-serif; display: flex; align-items: center; }
+.jadwal-ket { font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem; font-style: italic; font-family: 'Outfit', sans-serif; }
 
 /* ---- PENGUMUMAN ---- */
 .pengumuman-preview-section { background: var(--white); }
@@ -610,6 +611,41 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 /* ---- ANIMATIONS ---- */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-6px); } }
+
+/* ---- VISI SPLIT  ---- */
+.visi-preview { background: linear-gradient(135deg, #000000 0%, #1a0a00 50%, #2d0d0d 100%); }
+
+.visi-split { 
+  display: grid; grid-template-columns: 1fr 1px 1fr; 
+  gap: 4rem; 
+  align-items: start; 
+  padding: 2rem 0; 
+}
+.visi-split-divider { 
+  background: rgba(255,255,255,0.1);
+  align-self: stretch; 
+}
+.visi-split-label { 
+  display: block; 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  letter-spacing: 0.3em; 
+  text-transform: uppercase; 
+  color: var(--gold); 
+  margin-bottom: 1.5rem; 
+  font-family: 'Outfit', sans-serif; 
+}
+.visi-split-text { 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 800; 
+  font-size: clamp(1.8rem, 3vw, 3rem); 
+  color: var(--white); 
+  line-height: 1.1; 
+  text-transform: uppercase; 
+  margin-bottom: 1rem; 
+}
+
+.visi-split-text-sm { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(1rem, 1.8vw, 1.6rem); color: var(--white); line-height: 1.2; text-transform: uppercase; margin-bottom: 0.75rem; }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 900px) {
