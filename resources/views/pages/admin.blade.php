@@ -12,7 +12,7 @@
 
     {{-- LOGIN FORM --}}
     <div id="admin-login" class="admin-login-box">
-      <div class="admin-login-logo">&#10013;</div>
+      <div class="admin-login-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;"><rect x="10" y="2" width="4" height="22"/><rect x="2" y="7" width="20" height="4"/></svg></div>
       <h2>Panel Admin</h2>
       <p class="admin-login-sub">Masuk dengan akun admin gereja Anda</p>
       <input type="text" id="admin-user" placeholder="Username" autocomplete="off">

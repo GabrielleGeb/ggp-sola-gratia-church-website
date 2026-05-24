@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <div class="logo-cross big">&#10013;</div>
+      <div class="logo-cross big"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;"><rect x="10" y="2" width="4" height="22"/><rect x="2" y="7" width="20" height="4"/></svg></div>
       <div class="logo-name">GGP Sola Gratia</div>
       <p>Jl. Kertanegara No.26, Dusun Tratap, Sawotratap, Kec. Gedangan,<br>Kab. Sidoarjo, Jawa Timur, Indonesia</p>
     </div>

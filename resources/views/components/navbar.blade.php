@@ -1,7 +1,7 @@
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="{{ route('home') }}" class="logo">
-      <div class="logo-cross" id="logo-cross-btn">&#10013;</div>
+      <div class="logo-cross" id="logo-cross-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;"><rect x="10" y="2" width="4" height="22"/><rect x="2" y="7" width="20" height="4"/></svg></div>
       <div>
         <div class="logo-name">GGP Sola Gratia</div>
         <div class="logo-tagline">Gereja Gerakan Pentakosta</div>
