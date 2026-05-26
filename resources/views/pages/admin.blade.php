@@ -5,8 +5,6 @@
 <div id="page-admin" class="page" data-admin-tab="{{ $adminTab }}">
   <div class="page-hero small-hero dark-hero">
     <div class="page-hero-bg"></div>
-    <h1>Panel Admin</h1>
-    <p>Kelola konten website gereja</p>
   </div>
   <div class="container page-content">
 
