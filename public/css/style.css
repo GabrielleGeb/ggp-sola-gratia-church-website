@@ -114,7 +114,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
   animation: fadeUp 1s ease both;
 }
 .hero-kecil {
-  font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+  font-size: 1.25rem; letter-spacing: 0.35em; text-transform: uppercase;
   color: var(--gold); display: block; margin-bottom: 1.5rem;
   font-family: 'Outfit', sans-serif; font-weight: 600;
 }
@@ -133,7 +133,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
   font-size: clamp(3.5rem, 9vw, 7rem);
   font-weight: 900;
   color: var(--white);
-  letter-spacing: -0.03em;
+  /* letter-spacing: -0.03em; */
   line-height: 0.95;
   margin-top: 0.1em;
   text-transform: uppercase;
@@ -153,7 +153,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 .home-section { padding: 6rem 0; }
 .highlight-section { background: var(--white); }
 .section-label {
-  display: block; font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+  display: block; font-size: 1.25rem; letter-spacing: 0.35em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1rem; font-weight: 700;
   font-family: 'Outfit', sans-serif;
 }
@@ -189,7 +189,7 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
 }
 .visi-split-divider { background: rgba(255,255,255,0.1); align-self: stretch; }
 .visi-split-label {
-  display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.3em;
+  display: block; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-family: 'Outfit', sans-serif;
 }
 .visi-split-text {
@@ -502,3 +502,4 @@ button { cursor: pointer; font-family: 'Outfit', sans-serif; }
   .footer-inner { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
 }
+
